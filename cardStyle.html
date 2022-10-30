@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card style pure css</title>
+
+    <Style>
+        body{
+            min-height: 100vh;
+            background-color: rgba(245, 235, 222, 0.678);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            max-width: 1200px;
+            background-color: gray;
+        }
+
+        .card-container{
+            width: 1400px;
+            display: flex;
+            gap: 10px;
+            margin: mx auto;
+            
+        }
+
+        .card{
+            background-color: #fff;
+            padding: 25px;
+            box-sizing: border-box;
+            box-shadow: 2px 5px 10px 2px rgba(0, 0, 0, 0.226);
+            border-radius: 10px;
+        }
+
+        .card:has(.description) .header{
+            color: purple;
+        }
+
+        .card:not(:has(.description)) .header{
+            color: rgba(0, 100, 0, 0.418);
+        }
+
+        .card:not(:has(.description)) .btn{
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.301);
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .card:has(.description) .btn{
+            color: rgba(228, 174, 26, 0.966);
+            background-color: rgb(27, 29, 28);
+            border-radius: 5px;
+        }
+        .card:has(.recomended):hover .card{
+            transform: scale(1.1);
+          
+        }
+    </Style>
+</head>
+<body>
+ 
+
+     <div class="card-container">
+        <div class="card">
+            <div class="header">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+            </div>
+            <div class="card-body">
+                    <h4 class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quis et dignissimos!</h4>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, dolores ipsa odit non quasi esse incidunt placeat molestiae eligendi suscipit quaerat dolorum, totam repellendus vitae eum sint vel quia, voluptatem sunt. Deserunt fugit porro eligendi esse laborum animi voluptatem modi, asperiores iste, nam, ut eius non cupiditate inventore natus quas!</p>
+
+                    <p>2000 BDT</p>
+                    <button>Book Now</button>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="header recomended">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+            </div>
+            <div class="card-body">
+                    
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, dolores ipsa odit non quasi esse incidunt placeat molestiae eligendi suscipit quaerat dolorum, totam repellendus vitae eum sint vel quia, voluptatem sunt. Deserunt fugit porro eligendi esse laborum animi voluptatem modi, asperiores iste, nam, ut eius non cupiditate inventore natus quas!</p>
+
+                    <p>1500 BDT</p>
+                    <button class="btn">Book Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="header">
+                <h2>Lorem ipsum dolor sit amet.</h2>
+            </div>
+            <div class="card-body">
+                    <h4 class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quis et dignissimos!</h4>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, dolores ipsa odit non quasi esse incidunt placeat molestiae eligendi suscipit quaerat dolorum, totam repellendus vitae eum sint vel quia, voluptatem sunt. Deserunt fugit porro eligendi esse laborum animi voluptatem modi, asperiores iste, nam, ut eius non cupiditate inventore natus quas!</p>
+
+                    <p>3000 BDT</p>
+                    <button class="btn">Book Now</button>
+            </div>
+        </div>
+     </div>
+
+</body>
+</html>
